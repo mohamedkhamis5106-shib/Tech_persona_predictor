@@ -41,7 +41,7 @@ def build_persona_model():
 
     persona_by_focus = {
         "Solving puzzles & logic": "Hacker",
-        "Numbers & patterns": "Data Scientist",
+        "Numbers & patterns": "Hacker",
         "Building smart systems": "AI Engineer",
         "Design & creativity": "Designer",
         "Exploring & breaking things": "Hacker",
@@ -55,7 +55,7 @@ def build_persona_model():
         approach = random.choice(approach_options)
         energy = random.choice(energy_options)
 
-        persona = persona_by_focus.get(focus, "Data Scientist")
+        persona = persona_by_focus.get(focus, "Hacker")
 
         if energy == "Rebellious & curious" and schedule == "Night owl":
             persona = "Hacker"
@@ -64,11 +64,11 @@ def build_persona_model():
         elif energy == "Expressive & visual" and approach == "Trial & error experiments":
             persona = "Designer"
         elif energy == "Curious & analytical" and focus == "Numbers & patterns":
-            persona = "Data Scientist"
+            persona = "Hacker"
         elif approach == "Deep focus alone" and focus == "Solving puzzles & logic":
             persona = "Hacker"
         elif approach == "Careful planning" and focus == "Numbers & patterns":
-            persona = "Data Scientist"
+            persona = "Hacker"
 
         rows.append(
             {
